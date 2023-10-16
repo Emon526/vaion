@@ -33,7 +33,7 @@ class SendDoctorWidget extends StatelessWidget {
                 textInputType: TextInputType.emailAddress,
                 // textInputAction: TextInputAction.done,
                 onChanged: (value) {
-                  debugPrint(value);
+                  // debugPrint(value);
                 },
               ),
               SizedBox(height: size.height * 0.02),
@@ -54,7 +54,7 @@ class SendDoctorWidget extends StatelessWidget {
                         query: encodeQueryParameters(<String, String>{
                           'subject': value.patientName,
                           'body':
-                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n',
+                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n\nCurrent Symptoms :\n\nWhat symptoms are you experiencing today? ${value.currentSymptomsQ1}\nWhen did these symptoms start? ${value.currentSymptomsQ2}\nHave they worsened or improved since they began? ${value.currentSymptomsQ3}',
                         }),
                       );
                       if (await canLaunchUrl(emailLaunchUri)) {

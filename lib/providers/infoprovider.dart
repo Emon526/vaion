@@ -42,4 +42,25 @@ class InfoProvider extends ChangeNotifier {
     _patientemail = value;
     notifyListeners();
   }
+
+  String _currentSymptomsQ1 = '';
+  get currentSymptomsQ1 => _currentSymptomsQ1;
+  set currentSymptomsQ1(value) {
+    _currentSymptomsQ1 = value;
+    notifyListeners();
+  }
+
+  String _currentSymptomsQ2 = '';
+  get currentSymptomsQ2 => _currentSymptomsQ2;
+  set currentSymptomsQ2(value) {
+    _currentSymptomsQ2 = value;
+    notifyListeners();
+  }
+
+  String _currentSymptomsQ3 = '';
+  get currentSymptomsQ3 => _currentSymptomsQ3;
+  set currentSymptomsQ3(value) {
+    _currentSymptomsQ3 = value;
+    notifyListeners();
+  }
 }

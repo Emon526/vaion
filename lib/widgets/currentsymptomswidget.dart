@@ -31,8 +31,8 @@ class CurrentSymptomsWidget extends StatelessWidget {
                   errorText: 'Answer Required',
                 ),
                 textInputType: TextInputType.text,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (q1) {
+                  value.currentSymptomsQ1 = q1;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -43,8 +43,8 @@ class CurrentSymptomsWidget extends StatelessWidget {
                   errorText: 'Answer Required',
                 ),
                 textInputType: TextInputType.text,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (q2) {
+                  value.currentSymptomsQ2 = q2;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -55,8 +55,8 @@ class CurrentSymptomsWidget extends StatelessWidget {
                 textEditingController: question3,
                 labelText: 'Have they worsened or improved since they began?',
                 textInputType: TextInputType.text,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (q3) {
+                  value.currentSymptomsQ3 = q3;
                 },
               ),
             ],
