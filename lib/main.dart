@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
           ),
         ],
         builder: (context, child) {
-          //TODO:: Fix notification bar brightness
           removesplash();
           return const MaterialApp(
             themeMode: ThemeMode.system,
