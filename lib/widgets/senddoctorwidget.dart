@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../providers/infoprovider.dart';
 import 'custominputwidget.dart';
@@ -37,9 +38,37 @@ class SendDoctorWidget extends StatelessWidget {
               ),
               SizedBox(height: size.height * 0.02),
               CustomButton(
-                  ontap: () {
-                    if (value.senddoctoremailFormKey.currentState!
-                        .validate()) {}
+                  ontap: () async {
+                    if (value.senddoctoremailFormKey.currentState!.validate()) {
+                      String? encodeQueryParameters(
+                          Map<String, String> params) {
+                        return params.entries
+                            .map((MapEntry<String, String> e) =>
+                                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                            .join('&');
+                      }
+
+                      final Uri emailLaunchUri = Uri(
+                        scheme: 'mailto',
+                        path: doctoremailController.text,
+                        query: encodeQueryParameters(<String, String>{
+                          'subject': value.patientName,
+                          'body':
+                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n',
+                        }),
+                      );
+                      if (await canLaunchUrl(emailLaunchUri)) {
+                        launchUrl(emailLaunchUri);
+                      } else {
+                        throw Exception("Could not launch $emailLaunchUri");
+                      }
+
+                      // try {
+                      //   await launchUrl(emailLaunchUri);
+                      // } catch (e) {
+                      //   print(e.toString());
+                      // }
+                    }
                   },
                   buttontext: "Send Email")
             ],

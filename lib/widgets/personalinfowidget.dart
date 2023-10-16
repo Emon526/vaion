@@ -33,8 +33,8 @@ class PersonalInfoWidget extends StatelessWidget {
                   errorText: 'Name Required',
                 ),
                 textInputType: TextInputType.name,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (name) {
+                  value.patientName = name;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -45,8 +45,8 @@ class PersonalInfoWidget extends StatelessWidget {
                   errorText: 'Date of Birth Required',
                 ),
                 textInputType: TextInputType.datetime,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (dob) {
+                  value.patientdob = dob;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -57,8 +57,8 @@ class PersonalInfoWidget extends StatelessWidget {
                 textEditingController: addressController,
                 labelText: 'Address',
                 textInputType: TextInputType.text,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (address) {
+                  value.patientaddress = address;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -69,8 +69,8 @@ class PersonalInfoWidget extends StatelessWidget {
                 textEditingController: numberController,
                 labelText: 'Phone Number',
                 textInputType: TextInputType.number,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (number) {
+                  value.patientphone = number;
                 },
               ),
               SizedBox(height: size.height * 0.01),
@@ -83,8 +83,8 @@ class PersonalInfoWidget extends StatelessWidget {
                 labelText: 'Email address (if applicable)',
                 textInputType: TextInputType.emailAddress,
                 // textInputAction: TextInputAction.done,
-                onChanged: (value) {
-                  debugPrint(value);
+                onChanged: (email) {
+                  value.patientemail = email;
                 },
               ),
             ],
