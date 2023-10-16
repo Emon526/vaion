@@ -5,4 +5,6 @@ class InfoProvider extends ChangeNotifier {
   get patientFormKey => _patientFormKey;
   final _currentsymptomsFormKey = GlobalKey<FormState>();
   get currentsymptomsFormKey => _currentsymptomsFormKey;
+  final _senddoctoremailFormKey = GlobalKey<FormState>();
+  get senddoctoremailFormKey => _senddoctoremailFormKey;
 }

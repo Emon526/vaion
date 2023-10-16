@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:vaion/providers/infoprovider.dart';
-import 'package:vaion/widgets/currentsymptomswidget.dart';
 import '../consts/consts.dart';
+import '../providers/infoprovider.dart';
+import '../utils/utils.dart';
+import '../widgets/currentsymptomswidget.dart';
+import '../widgets/cutombutton.dart';
 import '../widgets/personalinfowidget.dart';
+import '../widgets/senddoctorwidget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,41 +14,40 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF38ACDB),
-        title: const Text(Consts.appName),
-      ),
-      body: Consumer<InfoProvider>(
-        builder: (BuildContext context, InfoProvider value, Widget? child) =>
-            SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                const PersonalInfoWidget(),
-                SizedBox(height: size.height * 0.02),
-                const CurrentSymptomsWidget(),
-                SizedBox(height: size.height * 0.02),
-                ElevatedButton(
-                  onPressed: () {
-                    value.patientFormKey.currentState!.validate();
-                    value.currentsymptomsFormKey.currentState!.validate();
-                  },
-                  child: const Text('Send '),
-                ),
-                // Material(
-                //   borderRadius:
-                //       BorderRadius.circular(Consts.defaultBorderRadius),
-                //   color: Colors.red,
-                //   child: InkWell(
-                //     child: Padding(
-                //       padding: const EdgeInsets.all(8.0),
-                //       child: Text("Send Information"),
-                //     ),
-                //   ),
-                // )
-              ],
+    return WillPopScope(
+      onWillPop: () async {
+        return await Utils(context)
+            .onWillPop(); // Allow popping the current route
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF38ACDB),
+          title: const Text(Consts.appName),
+        ),
+        body: Consumer<InfoProvider>(
+          builder: (BuildContext context, InfoProvider value, Widget? child) =>
+              SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  const PersonalInfoWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const CurrentSymptomsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  CustomButton(
+                      ontap: () {
+                        if (value.patientFormKey.currentState!.validate() &&
+                            value.currentsymptomsFormKey.currentState!
+                                .validate()) {
+                          Utils(context).showCustomDialog(
+                            child: const SendDoctorWidget(),
+                          );
+                        }
+                      },
+                      buttontext: "Send Information to Doctor"),
+                ],
+              ),
             ),
           ),
         ),
