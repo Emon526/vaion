@@ -12,6 +12,35 @@ class SendDoctorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String createPatientInformationText(value) {
+      return '''
+Patient Information:
+Patient name: ${value.patientName}
+Date of Birth: ${value.patientdob}
+Address: ${value.patientaddress}
+Phone Number: ${value.patientphone}
+Email Address: ${value.patientemail}
+
+Current Symptoms:
+What symptoms are you experiencing today? ${value.currentSymptomsQ1}
+When did these symptoms start? ${value.currentSymptomsQ2}
+Have they worsened or improved since they began? ${value.currentSymptomsQ3}
+
+Medical History:
+Do you have any chronic medical conditions? (e.g., diabetes, hypertension) ${value.medicalhistoryQ1}
+Have you had any surgeries or hospitalizations in the past? ${value.medicalhistoryQ2}
+Are you currently taking any medications or supplements? If so, please list them. ${value.medicalhistoryQ3}
+
+Allergies:
+Are you allergic to any medications, foods, or environmental factors? ${value.allergiesQ1}
+Have you experienced any adverse reactions to medications in the past? ${value.allergiesQ2}
+
+Immunization Status:
+Are you up-to-date on your vaccinations? ${value.immunizationstatusQ1}
+Have you received any specific vaccines recently? ${value.immunizationstatusQ2}
+''';
+    }
+
     final doctoremailController = TextEditingController();
     final size = MediaQuery.of(context).size;
     return Consumer<InfoProvider>(
@@ -53,11 +82,9 @@ class SendDoctorWidget extends StatelessWidget {
                         path: doctoremailController.text,
                         query: encodeQueryParameters(<String, String>{
                           'subject': value.patientName,
-                          'body':
-                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n\nCurrent Symptoms :\n\nWhat symptoms are you experiencing today? ${value.currentSymptomsQ1}\nWhen did these symptoms start? ${value.currentSymptomsQ2}\nHave they worsened or improved since they began? ${value.currentSymptomsQ3}\n\nMedical History :\n\nDo you have any chronic medical conditions? (e.g., diabetes, hypertension) ${value.medicalhistoryQ1}\nHave you had any surgeries or hospitalizations in the past? ${value.medicalhistoryQ2}\nAre you currently taking any medications or supplements? If so, please list them. ${value.medicalhistoryQ3}\n\nAllergies :\n\nAre you allergic to any medications, foods, or environmental factors? ${value.allergiesQ1}\nHave you experienced any adverse reactions to medications in the past? ${value.allergiesQ2}',
+                          'body': createPatientInformationText(value),
                         }),
                       );
-                      //     \n\nAllergies :\n\nAre you allergic to any medications, foods, or environmental factors? ${value.allergiesQ1}\nHave you experienced any adverse reactions to medications in the past? ${value.allergiesQ2}\nAre you currently taking any medications or supplements? If so, please list them. ${value.medicalhistoryQ3}
 
                       if (await canLaunchUrl(emailLaunchUri)) {
                         launchUrl(emailLaunchUri);
