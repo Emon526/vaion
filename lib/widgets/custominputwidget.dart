@@ -34,8 +34,10 @@ class InputWidget extends StatelessWidget {
       controller: textEditingController,
       textInputAction: textInputAction ?? TextInputAction.next,
       keyboardType: textInputType,
+      textCapitalization: TextCapitalization.words,
       decoration: InputDecoration(
         labelText: labelText,
+
         border: const OutlineInputBorder(),
         // labelStyle: const TextStyle(color: Consts.primaryColor),
         // enabledBorder: const OutlineInputBorder(
