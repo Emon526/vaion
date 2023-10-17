@@ -38,6 +38,12 @@ Have you experienced any adverse reactions to medications in the past? ${value.a
 Immunization Status:
 Are you up-to-date on your vaccinations? ${value.immunizationstatusQ1}
 Have you received any specific vaccines recently? ${value.immunizationstatusQ2}
+
+Lifestyle and Habits:
+Do you smoke or use tobacco products? If so, how much and how often? ${value.lifestylehabitsQ1}
+Do you consume alcohol? If so, how frequently and in what amounts? ${value.lifestylehabitsQ2}
+Do you exercise regularly? ${value.lifestylehabitsQ3}
+What is your typical diet like? ${value.lifestylehabitsQ4}
 ''';
     }
 

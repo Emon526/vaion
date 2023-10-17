@@ -9,6 +9,7 @@ import '../utils/utils.dart';
 import '../widgets/currentsymptomswidget.dart';
 import '../widgets/cutombutton.dart';
 import '../widgets/immunizationstatuswidget.dart';
+import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/senddoctorwidget.dart';
 
@@ -49,6 +50,8 @@ class HomeScreen extends StatelessWidget {
                   const AllergiesWidget(),
                   SizedBox(height: size.height * 0.02),
                   const ImmunizationStatusWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const LifestyleHabitsWidget(),
                   SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
