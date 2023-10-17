@@ -44,6 +44,9 @@ Do you smoke or use tobacco products? If so, how much and how often? ${value.lif
 Do you consume alcohol? If so, how frequently and in what amounts? ${value.lifestylehabitsQ2}
 Do you exercise regularly? ${value.lifestylehabitsQ3}
 What is your typical diet like? ${value.lifestylehabitsQ4}
+
+Family Medical History:
+Does your immediate family have a history of specific medical conditions (e.g., heart disease, cancer)? ${value.familyMedicalHistroryQ1}
 ''';
     }
 

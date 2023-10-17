@@ -30,7 +30,7 @@ class InputWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       readOnly: readOnly ?? false,
-      validator: validator,
+      // validator: validator,
       controller: textEditingController,
       textInputAction: textInputAction ?? TextInputAction.next,
       keyboardType: textInputType,

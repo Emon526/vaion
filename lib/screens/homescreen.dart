@@ -8,6 +8,7 @@ import '../providers/infoprovider.dart';
 import '../utils/utils.dart';
 import '../widgets/currentsymptomswidget.dart';
 import '../widgets/cutombutton.dart';
+import '../widgets/familymedicalhistorywidget.dart';
 import '../widgets/immunizationstatuswidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/personalinfowidget.dart';
@@ -53,6 +54,8 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const LifestyleHabitsWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const FamilyMedicalHistory(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
                         if (value.patientFormKey.currentState!.validate() &&
@@ -60,7 +63,11 @@ class HomeScreen extends StatelessWidget {
                                 .validate() &&
                             value.medicalHistoryFormKey.currentState!
                                 .validate() &&
-                            value.allergiesFormKey.currentState!.validate()) {
+                            value.allergiesFormKey.currentState!.validate() &&
+                            value.immunizationstatusFormKey.currentState!
+                                .validate() &&
+                            value.lifestylehabitsFormKey.currentState!
+                                .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );

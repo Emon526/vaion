@@ -15,6 +15,8 @@ class InfoProvider extends ChangeNotifier {
   get immunizationstatusFormKey => _immunizationstatusFormKey;
   final _lifestylehabitsFormKey = GlobalKey<FormState>();
   get lifestylehabitsFormKey => _lifestylehabitsFormKey;
+  final _familyMedicalHistroryFormKey = GlobalKey<FormState>();
+  get familyMedicalHistroryFormKey => _familyMedicalHistroryFormKey;
   String _patientName = '';
   get patientName => _patientName;
   set patientName(value) {
@@ -145,6 +147,13 @@ class InfoProvider extends ChangeNotifier {
   get lifestylehabitsQ4 => _lifestylehabitsQ4;
   set lifestylehabitsQ4(value) {
     _lifestylehabitsQ4 = value;
+    notifyListeners();
+  }
+
+  String _familyMedicalHistroryQ1 = '';
+  get familyMedicalHistroryQ1 => _familyMedicalHistroryQ1;
+  set familyMedicalHistroryQ1(value) {
+    _familyMedicalHistroryQ1 = value;
     notifyListeners();
   }
 }
