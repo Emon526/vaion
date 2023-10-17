@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:vaion/widgets/allergieswidget.dart';
 import 'package:vaion/widgets/medicalhistorywidget.dart';
 import '../consts/consts.dart';
 import '../providers/infoprovider.dart';
@@ -44,13 +45,16 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const MedicalHistoryWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const AllergiesWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
                         if (value.patientFormKey.currentState!.validate() &&
                             value.currentsymptomsFormKey.currentState!
                                 .validate() &&
                             value.medicalHistoryFormKey.currentState!
-                                .validate()) {
+                                .validate() &&
+                            value.allergiesFormKey.currentState!.validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );

@@ -9,7 +9,8 @@ class InfoProvider extends ChangeNotifier {
   get senddoctoremailFormKey => _senddoctoremailFormKey;
   final _medicalHistoryFormKey = GlobalKey<FormState>();
   get medicalHistoryFormKey => _medicalHistoryFormKey;
-
+  final _allergiesFormKey = GlobalKey<FormState>();
+  get allergiesFormKey => _allergiesFormKey;
   String _patientName = '';
   get patientName => _patientName;
   set patientName(value) {
@@ -84,6 +85,20 @@ class InfoProvider extends ChangeNotifier {
   get medicalhistoryQ3 => _medicalhistoryQ3;
   set medicalhistoryQ3(value) {
     _medicalhistoryQ3 = value;
+    notifyListeners();
+  }
+
+  String _allergiesQ1 = '';
+  get allergiesQ1 => _allergiesQ1;
+  set allergiesQ1(value) {
+    _allergiesQ1 = value;
+    notifyListeners();
+  }
+
+  String _allergiesQ2 = '';
+  get allergiesQ2 => _allergiesQ2;
+  set allergiesQ2(value) {
+    _allergiesQ2 = value;
     notifyListeners();
   }
 }
