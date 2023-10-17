@@ -6,8 +6,8 @@ import '../providers/infoprovider.dart';
 import 'custominputwidget.dart';
 import 'infocardwidget.dart';
 
-class FamilyMedicalHistory extends StatelessWidget {
-  const FamilyMedicalHistory({super.key});
+class FamilyMedicalHistoryWidget extends StatelessWidget {
+  const FamilyMedicalHistoryWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
