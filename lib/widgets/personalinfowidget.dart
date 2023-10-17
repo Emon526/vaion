@@ -179,7 +179,7 @@ class PersonalInfoWidget extends StatelessWidget {
                     EmailValidator(errorText: 'Enter a valid Email'),
                   ]),
                   textEditingController: emailController,
-                  labelText: 'Email address (if applicable)',
+                  labelText: 'Email address',
                   textInputType: TextInputType.emailAddress,
                   // textInputAction: TextInputAction.done,
                   onChanged: (email) {

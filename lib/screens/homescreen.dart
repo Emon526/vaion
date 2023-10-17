@@ -46,6 +46,7 @@ class HomeScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const PersonalInfoWidget(),
                   SizedBox(height: size.height * 0.02),
@@ -69,6 +70,13 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const GenderIdentityWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const Text(
+                    'Additional Questions',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
                         if (value.patientFormKey.currentState!.validate() &&
@@ -89,12 +97,22 @@ class HomeScreen extends StatelessWidget {
                                 .socialEnvironmentalFactorsFormKey.currentState!
                                 .validate() &&
                             value.isnsuranceInformationFormKey.currentState!
+                                .validate() &&
+                            value.genderIdentityFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );
                         }
                       },
+                      // ontap: () {
+                      //   if (value.isnsuranceInformationFormKey.currentState!
+                      //       .validate()) {
+                      //     Utils(context).showCustomDialog(
+                      //       child: const SendDoctorWidget(),
+                      //     );
+                      //   }
+                      // },
                       buttontext: "Send Information to Doctor"),
                 ],
               ),
