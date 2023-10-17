@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:vaion/widgets/allergieswidget.dart';
-import 'package:vaion/widgets/medicalhistorywidget.dart';
+
 import '../consts/consts.dart';
 import '../providers/infoprovider.dart';
 import '../utils/utils.dart';
+import '../widgets/allergieswidget.dart';
 import '../widgets/currentsymptomswidget.dart';
 import '../widgets/cutombutton.dart';
 import '../widgets/familymedicalhistorywidget.dart';
 import '../widgets/immunizationstatuswidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
+import '../widgets/medicalhistorywidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/senddoctorwidget.dart';
+import '../widgets/travelhistorywidget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -56,6 +58,8 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const FamilyMedicalHistory(),
                   SizedBox(height: size.height * 0.02),
+                  const TravelHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
                         if (value.patientFormKey.currentState!.validate() &&
@@ -67,6 +71,10 @@ class HomeScreen extends StatelessWidget {
                             value.immunizationstatusFormKey.currentState!
                                 .validate() &&
                             value.lifestylehabitsFormKey.currentState!
+                                .validate() &&
+                            value.familyMedicalHistroryFormKey.currentState!
+                                .validate() &&
+                            value.travelHistoryFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),

@@ -47,6 +47,10 @@ What is your typical diet like? ${value.lifestylehabitsQ4}
 
 Family Medical History:
 Does your immediate family have a history of specific medical conditions (e.g., heart disease, cancer)? ${value.familyMedicalHistroryQ1}
+
+Travel History:
+Have you traveled outside of Ontario or internationally in the past few weeks? ${value.travelHistoryQ1}
+If yes, where and when? ${value.travelHistoryQ2}
 ''';
     }
 
