@@ -14,6 +14,7 @@ import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/senddoctorwidget.dart';
+import '../widgets/socialenvironmentalfactorswidget.dart';
 import '../widgets/travelhistorywidget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -56,9 +57,11 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const LifestyleHabitsWidget(),
                   SizedBox(height: size.height * 0.02),
-                  const FamilyMedicalHistory(),
+                  const FamilyMedicalHistoryWidget(),
                   SizedBox(height: size.height * 0.02),
                   const TravelHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const SocialEnvironmentalFactorsWidget(),
                   SizedBox(height: size.height * 0.02),
                   CustomButton(
                       ontap: () {
@@ -75,6 +78,9 @@ class HomeScreen extends StatelessWidget {
                             value.familyMedicalHistroryFormKey.currentState!
                                 .validate() &&
                             value.travelHistoryFormKey.currentState!
+                                .validate() &&
+                            value
+                                .socialEnvironmentalFactorsFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),

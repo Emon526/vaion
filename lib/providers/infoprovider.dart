@@ -19,6 +19,8 @@ class InfoProvider extends ChangeNotifier {
   get familyMedicalHistroryFormKey => _familyMedicalHistroryFormKey;
   final _travelHistoryFormKey = GlobalKey<FormState>();
   get travelHistoryFormKey => _travelHistoryFormKey;
+  final _socialEnvironmentalFactorsFormKey = GlobalKey<FormState>();
+  get socialEnvironmentalFactorsFormKey => _socialEnvironmentalFactorsFormKey;
 
   String _patientName = '';
   get patientName => _patientName;
@@ -171,6 +173,13 @@ class InfoProvider extends ChangeNotifier {
   get travelHistoryQ2 => _travelHistoryQ2;
   set travelHistoryQ2(value) {
     _travelHistoryQ2 = value;
+    notifyListeners();
+  }
+
+  String _socialEnvironmentalFactorsQ1 = '';
+  get socialEnvironmentalFactorsQ1 => _socialEnvironmentalFactorsQ1;
+  set socialEnvironmentalFactorsQ1(value) {
+    _socialEnvironmentalFactorsQ1 = value;
     notifyListeners();
   }
 }
