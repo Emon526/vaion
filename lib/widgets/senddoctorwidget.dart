@@ -54,6 +54,12 @@ If yes, where and when? ${value.travelHistoryQ2}
 
 Social and Environmental Factors:
 Do you live or work in an environment that may impact your health (e.g., exposure to pollutants, hazardous materials)? ${value.socialEnvironmentalFactorsQ1}
+
+Insurance Information:
+Do you have health insurance coverage? If so, what is your policy information? ${value.insuranceInformationQ1}
+
+Gender Identity:
+What is your gender identity? (Options may include male, female, transgender, non-binary, prefer not to say, or a space for self-identification. ${value.genderIdentityQ1}
 ''';
     }
 

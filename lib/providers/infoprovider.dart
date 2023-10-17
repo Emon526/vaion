@@ -182,4 +182,24 @@ class InfoProvider extends ChangeNotifier {
     _socialEnvironmentalFactorsQ1 = value;
     notifyListeners();
   }
+
+  final _isnsuranceInformationFormKey = GlobalKey<FormState>();
+  get isnsuranceInformationFormKey => _isnsuranceInformationFormKey;
+
+  String _insuranceInformationQ1 = '';
+  get insuranceInformationQ1 => _insuranceInformationQ1;
+  set insuranceInformationQ1(value) {
+    _insuranceInformationQ1 = value;
+    notifyListeners();
+  }
+
+  final _genderIdentityFormKey = GlobalKey<FormState>();
+  get genderIdentityFormKey => _genderIdentityFormKey;
+
+  String _genderIdentityQ1 = '';
+  get genderIdentityQ1 => _genderIdentityQ1;
+  set genderIdentityQ1(value) {
+    _genderIdentityQ1 = value;
+    notifyListeners();
+  }
 }
