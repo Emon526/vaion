@@ -7,6 +7,8 @@ class InfoProvider extends ChangeNotifier {
   get currentsymptomsFormKey => _currentsymptomsFormKey;
   final _senddoctoremailFormKey = GlobalKey<FormState>();
   get senddoctoremailFormKey => _senddoctoremailFormKey;
+  final _medicalHistoryFormKey = GlobalKey<FormState>();
+  get medicalHistoryFormKey => _medicalHistoryFormKey;
 
   String _patientName = '';
   get patientName => _patientName;
@@ -61,6 +63,27 @@ class InfoProvider extends ChangeNotifier {
   get currentSymptomsQ3 => _currentSymptomsQ3;
   set currentSymptomsQ3(value) {
     _currentSymptomsQ3 = value;
+    notifyListeners();
+  }
+
+  String _medicalhistoryQ1 = '';
+  get medicalhistoryQ1 => _medicalhistoryQ1;
+  set medicalhistoryQ1(value) {
+    _medicalhistoryQ1 = value;
+    notifyListeners();
+  }
+
+  String _medicalhistoryQ2 = '';
+  get medicalhistoryQ2 => _medicalhistoryQ2;
+  set medicalhistoryQ2(value) {
+    _medicalhistoryQ2 = value;
+    notifyListeners();
+  }
+
+  String _medicalhistoryQ3 = '';
+  get medicalhistoryQ3 => _medicalhistoryQ3;
+  set medicalhistoryQ3(value) {
+    _medicalhistoryQ3 = value;
     notifyListeners();
   }
 }

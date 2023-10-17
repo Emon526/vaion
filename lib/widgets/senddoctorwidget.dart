@@ -54,7 +54,7 @@ class SendDoctorWidget extends StatelessWidget {
                         query: encodeQueryParameters(<String, String>{
                           'subject': value.patientName,
                           'body':
-                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n\nCurrent Symptoms :\n\nWhat symptoms are you experiencing today? ${value.currentSymptomsQ1}\nWhen did these symptoms start? ${value.currentSymptomsQ2}\nHave they worsened or improved since they began? ${value.currentSymptomsQ3}',
+                              'Patient Information : \n\nPatient name : ${value.patientName} \n Date of Birth : ${value.patientdob} \nAddress : ${value.patientaddress} \nPhone Number: ${value.patientphone} \nEmail Address : ${value.patientemail} \n\nCurrent Symptoms :\n\nWhat symptoms are you experiencing today? ${value.currentSymptomsQ1}\nWhen did these symptoms start? ${value.currentSymptomsQ2}\nHave they worsened or improved since they began? ${value.currentSymptomsQ3}\n\nMedical History :\n\nDo you have any chronic medical conditions? (e.g., diabetes, hypertension) ${value.medicalhistoryQ1}\nHave you had any surgeries or hospitalizations in the past? ${value.medicalhistoryQ2}\nAre you currently taking any medications or supplements? If so, please list them. ${value.medicalhistoryQ3}',
                         }),
                       );
                       if (await canLaunchUrl(emailLaunchUri)) {
