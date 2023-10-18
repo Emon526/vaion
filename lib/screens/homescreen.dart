@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:vaion/widgets/customsnackbar.dart';
 
 import '../consts/consts.dart';
 import '../providers/infoprovider.dart';
@@ -103,6 +104,11 @@ class HomeScreen extends StatelessWidget {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );
+                        } else {
+                          CustomSnackbar.show(
+                              context: context,
+                              snackbarColor: Colors.red,
+                              message: 'Please Input All Fields');
                         }
                       },
                       // ontap: () {
