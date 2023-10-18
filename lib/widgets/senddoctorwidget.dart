@@ -87,6 +87,12 @@ Have you experienced any recent injuries, accidents, or trauma? ${value.recentin
 
 Mental Health:
 Are you currently experiencing any mental health concerns, such as anxiety or depression? ${value.mentalhealthQ1}
+
+Contraception:
+If relevant, are you using any form of contraception or family planning methods? ${value.contraceptionQ1}
+
+Dietary Restrictions:
+Do you have any dietary restrictions or specific dietary preferences? ${value.dietaryrestrictionsQ1}
 ''';
     }
 

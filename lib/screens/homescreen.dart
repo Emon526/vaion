@@ -7,8 +7,11 @@ import '../providers/infoprovider.dart';
 import '../utils/utils.dart';
 import '../widgets/allergieswidget.dart';
 import '../widgets/chnagesinhealthwidget.dart';
+import '../widgets/contraceptionwidget.dart';
 import '../widgets/currentsymptomswidget.dart';
+import '../widgets/customsnackbar.dart';
 import '../widgets/cutombutton.dart';
+import '../widgets/dietaryrestrictionswidget.dart';
 import '../widgets/familymedicalhistorywidget.dart';
 import '../widgets/genderidentitywidget.dart';
 import '../widgets/immunizationstatuswidget.dart';
@@ -78,28 +81,32 @@ class HomeScreen extends StatelessWidget {
                   // SizedBox(height: size.height * 0.02),
                   // const GenderIdentityWidget(),
                   // SizedBox(height: size.height * 0.02),
-                  const Text(
-                    'Additional Questions',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  SizedBox(height: size.height * 0.02),
-                  const PreviousMedicalTestWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const PrimaryConcernWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const MedicationHistoryWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const PainScaleWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const ChangesInHealthWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const MenstrualHistoryWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const RecentInjuriesWidget(),
-                  SizedBox(height: size.height * 0.02),
+                  // const Text(
+                  //   'Additional Questions',
+                  //   style: TextStyle(
+                  //     fontWeight: FontWeight.w500,
+                  //   ),
+                  // ),
+                  // SizedBox(height: size.height * 0.02),
+                  // const PreviousMedicalTestWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const PrimaryConcernWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const MedicationHistoryWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const PainScaleWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const ChangesInHealthWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const MenstrualHistoryWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const RecentInjuriesWidget(),
+                  // SizedBox(height: size.height * 0.02),
                   const MentalHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const ContraceptionWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const DietaryRestrictionsWidget(),
                   SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
@@ -123,6 +130,18 @@ class HomeScreen extends StatelessWidget {
                       //       value.isnsuranceInformationFormKey.currentState!
                       //           .validate() &&
                       //       value.genderIdentityFormKey.currentState!
+                      //           .validate()&&value.previousmedicaltestFormKey.currentState!
+                      //           .validate() &&
+                      //       value.primaryconcernFormKey.currentState!
+                      //           .validate() &&
+                      //       value.medicationhistoryFormKey.currentState!
+                      //           .validate() &&
+                      //       value.painscaleFormKey.currentState!.validate() &&
+                      //       value.changesinhealthFormKey.currentState!
+                      //           .validate() &&
+                      //       value.menstrualhistoryFormKey.currentState!
+                      //           .validate() &&
+                      //       value.recentinjuriesFormKey.currentState!
                       //           .validate()) {
                       //     Utils(context).showCustomDialog(
                       //       child: const SendDoctorWidget(),
@@ -135,20 +154,11 @@ class HomeScreen extends StatelessWidget {
                       //   }
                       // },
                       ontap: () {
-                        if (value.previousmedicaltestFormKey.currentState!
+                        if (value.mentalhealthFormKey.currentState!
                                 .validate() &&
-                            value.primaryconcernFormKey.currentState!
+                            value.contraceptionFormKey.currentState!
                                 .validate() &&
-                            value.medicationhistoryFormKey.currentState!
-                                .validate() &&
-                            value.painscaleFormKey.currentState!.validate() &&
-                            value.changesinhealthFormKey.currentState!
-                                .validate() &&
-                            value.menstrualhistoryFormKey.currentState!
-                                .validate() &&
-                            value.recentinjuriesFormKey.currentState!
-                                .validate() &&
-                            value.mentalhealthFormKey.currentState!
+                            value.dietaryrestrictionsFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
