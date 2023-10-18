@@ -16,10 +16,13 @@ import '../widgets/insuranceInfowidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
 import '../widgets/medicationhistorywidget.dart';
+import '../widgets/menstrualhistorywidget.dart';
+import '../widgets/mentalhealthwidget.dart';
 import '../widgets/painscalewidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/previousmedicaltestwidget.dart';
 import '../widgets/primaryconcernwidget.dart';
+import '../widgets/recentinjurieswidget.dart';
 import '../widgets/senddoctorwidget.dart';
 import '../widgets/socialenvironmentalfactorswidget.dart';
 import '../widgets/travelhistorywidget.dart';
@@ -92,6 +95,12 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const ChangesInHealthWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const MenstrualHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const RecentInjuriesWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MentalHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
                       //   if (value.patientFormKey.currentState!.validate() &&
@@ -134,6 +143,12 @@ class HomeScreen extends StatelessWidget {
                                 .validate() &&
                             value.painscaleFormKey.currentState!.validate() &&
                             value.changesinhealthFormKey.currentState!
+                                .validate() &&
+                            value.menstrualhistoryFormKey.currentState!
+                                .validate() &&
+                            value.recentinjuriesFormKey.currentState!
+                                .validate() &&
+                            value.mentalhealthFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),

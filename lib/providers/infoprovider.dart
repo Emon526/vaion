@@ -273,4 +273,34 @@ class InfoProvider extends ChangeNotifier {
     _changesinhealthQ1 = value;
     notifyListeners();
   }
+
+  final _menstrualhistoryFormKey = GlobalKey<FormState>();
+  get menstrualhistoryFormKey => _menstrualhistoryFormKey;
+
+  String _menstrualhistoryQ1 = '';
+  get menstrualhistoryQ1 => _menstrualhistoryQ1;
+  set menstrualhistoryQ1(value) {
+    _menstrualhistoryQ1 = value;
+    notifyListeners();
+  }
+
+  final _recentinjuriesFormKey = GlobalKey<FormState>();
+  get recentinjuriesFormKey => _recentinjuriesFormKey;
+
+  String _recentinjuriesQ1 = '';
+  get recentinjuriesQ1 => _recentinjuriesQ1;
+  set recentinjuriesQ1(value) {
+    _recentinjuriesQ1 = value;
+    notifyListeners();
+  }
+
+  final _mentalhealthFormKey = GlobalKey<FormState>();
+  get mentalhealthFormKey => _mentalhealthFormKey;
+
+  String _mentalhealthQ1 = '';
+  get mentalhealthQ1 => _mentalhealthQ1;
+  set mentalhealthQ1(value) {
+    _mentalhealthQ1 = value;
+    notifyListeners();
+  }
 }

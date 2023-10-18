@@ -78,6 +78,15 @@ On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imagin
 
 Changes in Health:
 Have there been any significant changes in your health since your last visit to a healthcare provider? ${value.changesinhealthQ1}
+
+Menstrual History:
+For individuals with menstrual cycles: When was your last menstrual period, and is it regular? ${value.menstrualhistoryQ1}
+
+Recent Injuries or Trauma:
+Have you experienced any recent injuries, accidents, or trauma? ${value.recentinjuriesQ1}
+
+Mental Health:
+Are you currently experiencing any mental health concerns, such as anxiety or depression? ${value.mentalhealthQ1}
 ''';
     }
 
