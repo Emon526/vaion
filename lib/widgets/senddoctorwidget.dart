@@ -72,6 +72,12 @@ Are there any specific concerns or questions you would like to address during th
 Medication History:
 Are you currently taking over-the-counter medications, herbal supplements, or vitamins? ${value.medicationhistoryQ1}
 Have you recently started or stopped any medications? ${value.medicationhistoryQ2}
+
+Pain Scale:
+On a scale from 0 to 10, with 0 being no pain and 10 being the worst pain imaginable, how would you rate the severity of any pain you're experiencing? ${value.painscaleQ1}
+
+Changes in Health:
+Have there been any significant changes in your health since your last visit to a healthcare provider? ${value.changesinhealthQ1}
 ''';
     }
 

@@ -6,6 +6,7 @@ import '../consts/consts.dart';
 import '../providers/infoprovider.dart';
 import '../utils/utils.dart';
 import '../widgets/allergieswidget.dart';
+import '../widgets/chnagesinhealthwidget.dart';
 import '../widgets/currentsymptomswidget.dart';
 import '../widgets/cutombutton.dart';
 import '../widgets/familymedicalhistorywidget.dart';
@@ -15,6 +16,7 @@ import '../widgets/insuranceInfowidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
 import '../widgets/medicationhistorywidget.dart';
+import '../widgets/painscalewidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/previousmedicaltestwidget.dart';
 import '../widgets/primaryconcernwidget.dart';
@@ -86,6 +88,10 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const MedicationHistoryWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const PainScaleWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const ChangesInHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
                       //   if (value.patientFormKey.currentState!.validate() &&
@@ -125,6 +131,9 @@ class HomeScreen extends StatelessWidget {
                             value.primaryconcernFormKey.currentState!
                                 .validate() &&
                             value.medicationhistoryFormKey.currentState!
+                                .validate() &&
+                            value.painscaleFormKey.currentState!.validate() &&
+                            value.changesinhealthFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),

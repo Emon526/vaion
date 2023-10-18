@@ -253,4 +253,24 @@ class InfoProvider extends ChangeNotifier {
     _medicationhistoryQ2 = value;
     notifyListeners();
   }
+
+  final _painscaleFormKey = GlobalKey<FormState>();
+  get painscaleFormKey => _painscaleFormKey;
+
+  String _painscaleQ1 = '';
+  get painscaleQ1 => _painscaleQ1;
+  set painscaleQ1(value) {
+    _painscaleQ1 = value;
+    notifyListeners();
+  }
+
+  final _changesinhealthFormKey = GlobalKey<FormState>();
+  get changesinhealthFormKey => _changesinhealthFormKey;
+
+  String _changesinhealthQ1 = '';
+  get changesinhealthQ1 => _changesinhealthQ1;
+  set changesinhealthQ1(value) {
+    _changesinhealthQ1 = value;
+    notifyListeners();
+  }
 }
