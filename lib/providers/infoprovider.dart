@@ -202,4 +202,55 @@ class InfoProvider extends ChangeNotifier {
     _genderIdentityQ1 = value;
     notifyListeners();
   }
+
+  final _previousmedicaltestFormKey = GlobalKey<FormState>();
+  get previousmedicaltestFormKey => _previousmedicaltestFormKey;
+
+  String _previousmedicaltestQ1 = '';
+  get previousmedicaltestQ1 => _previousmedicaltestQ1;
+  set previousmedicaltestQ1(value) {
+    _previousmedicaltestQ1 = value;
+    notifyListeners();
+  }
+
+  String _previousmedicaltestQ2 = '';
+  get previousmedicaltestQ2 => _previousmedicaltestQ2;
+  set previousmedicaltestQ2(value) {
+    _previousmedicaltestQ2 = value;
+    notifyListeners();
+  }
+
+  final _primaryconcernFormKey = GlobalKey<FormState>();
+  get primaryconcernFormKey => _primaryconcernFormKey;
+
+  String _primaryconcernQ1 = '';
+  get primaryconcernQ1 => _primaryconcernQ1;
+  set primaryconcernQ1(value) {
+    _primaryconcernQ1 = value;
+    notifyListeners();
+  }
+
+  String _primaryconcernQ2 = '';
+  get primaryconcernQ2 => _primaryconcernQ2;
+  set primaryconcernQ2(value) {
+    _primaryconcernQ2 = value;
+    notifyListeners();
+  }
+
+  final _medicationhistoryFormKey = GlobalKey<FormState>();
+  get medicationhistoryFormKey => _medicationhistoryFormKey;
+
+  String _medicationhistoryQ1 = '';
+  get medicationhistoryQ1 => _medicationhistoryQ1;
+  set medicationhistoryQ1(value) {
+    _medicationhistoryQ1 = value;
+    notifyListeners();
+  }
+
+  String _medicationhistoryQ2 = '';
+  get medicationhistoryQ2 => _medicationhistoryQ2;
+  set medicationhistoryQ2(value) {
+    _medicationhistoryQ2 = value;
+    notifyListeners();
+  }
 }

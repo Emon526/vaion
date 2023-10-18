@@ -60,6 +60,18 @@ Do you have health insurance coverage? If so, what is your policy information? $
 
 Gender Identity:
 What is your gender identity? (Options may include male, female, transgender, non-binary, prefer not to say, or a space for self-identification. ${value.genderIdentityQ1}
+
+Previous Medical Tests:
+Have you had any recent medical tests or imaging studies (e.g., X-rays, blood tests)? ${value.previousmedicaltestQ1}
+If so, please provide details and results if available. ${value.previousmedicaltestQ2}
+
+Primary Concern:
+What is your primary reason for seeking medical attention today? ${value.primaryconcernQ1}
+Are there any specific concerns or questions you would like to address during this visit? ${value.primaryconcernQ2}
+
+Medication History:
+Are you currently taking over-the-counter medications, herbal supplements, or vitamins? ${value.medicationhistoryQ1}
+Have you recently started or stopped any medications? ${value.medicationhistoryQ2}
 ''';
     }
 

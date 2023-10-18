@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:vaion/widgets/customsnackbar.dart';
 
 import '../consts/consts.dart';
 import '../providers/infoprovider.dart';
@@ -15,7 +14,10 @@ import '../widgets/immunizationstatuswidget.dart';
 import '../widgets/insuranceInfowidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
+import '../widgets/medicationhistorywidget.dart';
 import '../widgets/personalinfowidget.dart';
+import '../widgets/previousmedicaltestwidget.dart';
+import '../widgets/primaryconcernwidget.dart';
 import '../widgets/senddoctorwidget.dart';
 import '../widgets/socialenvironmentalfactorswidget.dart';
 import '../widgets/travelhistorywidget.dart';
@@ -49,28 +51,28 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const PersonalInfoWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const CurrentSymptomsWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const MedicalHistoryWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const AllergiesWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const ImmunizationStatusWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const LifestyleHabitsWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const FamilyMedicalHistoryWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const TravelHistoryWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const SocialEnvironmentalFactorsWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const InsuranceInformationWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const GenderIdentityWidget(),
-                  SizedBox(height: size.height * 0.02),
+                  // const PersonalInfoWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const CurrentSymptomsWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const MedicalHistoryWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const AllergiesWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const ImmunizationStatusWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const LifestyleHabitsWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const FamilyMedicalHistoryWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const TravelHistoryWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const SocialEnvironmentalFactorsWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const InsuranceInformationWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const GenderIdentityWidget(),
+                  // SizedBox(height: size.height * 0.02),
                   const Text(
                     'Additional Questions',
                     style: TextStyle(
@@ -78,47 +80,60 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: size.height * 0.02),
+                  const PreviousMedicalTestWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const PrimaryConcernWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MedicationHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
+                      // ontap: () {
+                      //   if (value.patientFormKey.currentState!.validate() &&
+                      //       value.currentsymptomsFormKey.currentState!
+                      //           .validate() &&
+                      //       value.medicalHistoryFormKey.currentState!
+                      //           .validate() &&
+                      //       value.allergiesFormKey.currentState!.validate() &&
+                      //       value.immunizationstatusFormKey.currentState!
+                      //           .validate() &&
+                      //       value.lifestylehabitsFormKey.currentState!
+                      //           .validate() &&
+                      //       value.familyMedicalHistroryFormKey.currentState!
+                      //           .validate() &&
+                      //       value.travelHistoryFormKey.currentState!
+                      //           .validate() &&
+                      //       value
+                      //           .socialEnvironmentalFactorsFormKey.currentState!
+                      //           .validate() &&
+                      //       value.isnsuranceInformationFormKey.currentState!
+                      //           .validate() &&
+                      //       value.genderIdentityFormKey.currentState!
+                      //           .validate()) {
+                      //     Utils(context).showCustomDialog(
+                      //       child: const SendDoctorWidget(),
+                      //     );
+                      //   } else {
+                      //     CustomSnackbar.show(
+                      //         context: context,
+                      //         snackbarColor: Colors.red,
+                      //         message: 'Please Input All Fields');
+                      //   }
+                      // },
                       ontap: () {
-                        if (value.patientFormKey.currentState!.validate() &&
-                            value.currentsymptomsFormKey.currentState!
+                        if (value.previousmedicaltestFormKey.currentState!
                                 .validate() &&
-                            value.medicalHistoryFormKey.currentState!
+                            value.primaryconcernFormKey.currentState!
                                 .validate() &&
-                            value.allergiesFormKey.currentState!.validate() &&
-                            value.immunizationstatusFormKey.currentState!
-                                .validate() &&
-                            value.lifestylehabitsFormKey.currentState!
-                                .validate() &&
-                            value.familyMedicalHistroryFormKey.currentState!
-                                .validate() &&
-                            value.travelHistoryFormKey.currentState!
-                                .validate() &&
-                            value
-                                .socialEnvironmentalFactorsFormKey.currentState!
-                                .validate() &&
-                            value.isnsuranceInformationFormKey.currentState!
-                                .validate() &&
-                            value.genderIdentityFormKey.currentState!
+                            value.medicationhistoryFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );
-                        } else {
-                          CustomSnackbar.show(
-                              context: context,
-                              snackbarColor: Colors.red,
-                              message: 'Please Input All Fields');
                         }
+                        // Utils(context).showCustomDialog(
+                        //   child: const SendDoctorWidget(),
+                        // );
                       },
-                      // ontap: () {
-                      //   if (value.isnsuranceInformationFormKey.currentState!
-                      //       .validate()) {
-                      //     Utils(context).showCustomDialog(
-                      //       child: const SendDoctorWidget(),
-                      //     );
-                      //   }
-                      // },
                       buttontext: "Send Information to Doctor"),
                 ],
               ),
