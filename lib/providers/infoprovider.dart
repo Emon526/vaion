@@ -323,4 +323,14 @@ class InfoProvider extends ChangeNotifier {
     _dietaryrestrictionsQ1 = value;
     notifyListeners();
   }
+
+  final _sleeppatternsFormKey = GlobalKey<FormState>();
+  get sleeppatternsFormKey => _sleeppatternsFormKey;
+
+  String _sleeppatternsQ1 = '';
+  get sleeppatternsQ1 => _sleeppatternsQ1;
+  set sleeppatternsQ1(value) {
+    _sleeppatternsQ1 = value;
+    notifyListeners();
+  }
 }

@@ -93,6 +93,10 @@ If relevant, are you using any form of contraception or family planning methods?
 
 Dietary Restrictions:
 Do you have any dietary restrictions or specific dietary preferences? ${value.dietaryrestrictionsQ1}
+
+Sleep Patterns:
+How is your sleep quality and duration? Are you experiencing any sleep disturbances? ${value.sleeppatternsQ1}
+
 ''';
     }
 
