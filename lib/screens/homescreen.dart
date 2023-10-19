@@ -23,12 +23,14 @@ import '../widgets/medicationhistorywidget.dart';
 import '../widgets/menstrualhistorywidget.dart';
 import '../widgets/mentalhealthhistorywidget.dart';
 import '../widgets/mentalhealthwidget.dart';
+import '../widgets/otherconcernswidget.dart';
 import '../widgets/painscalewidget.dart';
 import '../widgets/personalinfowidget.dart';
 import '../widgets/physicalactivitywidget.dart';
 import '../widgets/previousmedicaltestwidget.dart';
 import '../widgets/primaryconcernwidget.dart';
 import '../widgets/recentinjurieswidget.dart';
+import '../widgets/recentstressorswidget.dart';
 import '../widgets/senddoctorwidget.dart';
 import '../widgets/sexualhealthwidget.dart';
 import '../widgets/sleeppatternswidget.dart';
@@ -67,146 +69,146 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // const PersonalInfoWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const CurrentSymptomsWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const MedicalHistoryWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const AllergiesWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const ImmunizationStatusWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const LifestyleHabitsWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const FamilyMedicalHistoryWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const TravelHistoryWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const SocialEnvironmentalFactorsWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const InsuranceInformationWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const GenderIdentityWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const Text(
-                  //   'Additional Questions',
-                  //   style: TextStyle(
-                  //     fontWeight: FontWeight.w500,
-                  //   ),
-                  // ),
-                  // SizedBox(height: size.height * 0.02),
-                  // const PreviousMedicalTestWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const PrimaryConcernWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const MedicationHistoryWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const PainScaleWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const ChangesInHealthWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const MenstrualHistoryWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const RecentInjuriesWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const MentalHealthWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const ContraceptionWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const DietaryRestrictionsWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const SleepPatternsWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const PhysicalActivityWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const MedicalDevicesWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const VisionHearingWidget(),
-                  // SizedBox(height: size.height * 0.02),
-                  // const SupplementsHerbalRemediesWidget(),
-                  // SizedBox(height: size.height * 0.02),
+                  const PersonalInfoWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const CurrentSymptomsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MedicalHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const AllergiesWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const ImmunizationStatusWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const LifestyleHabitsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const FamilyMedicalHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const TravelHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const SocialEnvironmentalFactorsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const InsuranceInformationWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const GenderIdentityWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const Text(
+                    'Additional Questions',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(height: size.height * 0.02),
+                  const PreviousMedicalTestWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const PrimaryConcernWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MedicationHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const PainScaleWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const ChangesInHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MenstrualHistoryWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const RecentInjuriesWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MentalHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const ContraceptionWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const DietaryRestrictionsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const SleepPatternsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const PhysicalActivityWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MedicalDevicesWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const VisionHearingWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const SupplementsHerbalRemediesWidget(),
+                  SizedBox(height: size.height * 0.02),
                   const SexualHealthWidget(),
                   SizedBox(height: size.height * 0.02),
                   const SubstanceUseWidget(),
                   SizedBox(height: size.height * 0.02),
                   const MentalHealthHistoryWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const RecentStressorsWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const OtherConcernWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
-                      // ontap: () {
-                      //   if (value.patientFormKey.currentState!.validate() &&
-                      //       value.currentsymptomsFormKey.currentState!
-                      //           .validate() &&
-                      //       value.medicalHistoryFormKey.currentState!
-                      //           .validate() &&
-                      //       value.allergiesFormKey.currentState!.validate() &&
-                      //       value.immunizationstatusFormKey.currentState!
-                      //           .validate() &&
-                      //       value.lifestylehabitsFormKey.currentState!
-                      //           .validate() &&
-                      //       value.familyMedicalHistroryFormKey.currentState!
-                      //           .validate() &&
-                      //       value.travelHistoryFormKey.currentState!
-                      //           .validate() &&
-                      //       value
-                      //           .socialEnvironmentalFactorsFormKey.currentState!
-                      //           .validate() &&
-                      //       value.isnsuranceInformationFormKey.currentState!
-                      //           .validate() &&
-                      //       value.genderIdentityFormKey.currentState!
-                      //           .validate() &&
-                      //       value.previousmedicaltestFormKey.currentState!
-                      //           .validate() &&
-                      //       value.primaryconcernFormKey.currentState!
-                      //           .validate() &&
-                      //       value.medicationhistoryFormKey.currentState!
-                      //           .validate() &&
-                      //       value.painscaleFormKey.currentState!.validate() &&
-                      //       value.changesinhealthFormKey.currentState!
-                      //           .validate() &&
-                      //       value.menstrualhistoryFormKey.currentState!
-                      //           .validate() &&
-                      //       value.recentinjuriesFormKey.currentState!
-                      //           .validate() &&
-                      //       value.mentalhealthFormKey.currentState!
-                      //           .validate() &&
-                      //       value.contraceptionFormKey.currentState!
-                      //           .validate() &&
-                      //       value.dietaryrestrictionsFormKey.currentState!
-                      //           .validate() &&
-                      //       value.sleeppatternsFormKey.currentState!
-                      //           .validate() &&
-                      //       value.physicalactivityFormKey.currentState!
-                      //           .validate() &&
-                      //       value.medicaldevicesFormKey.currentState!
-                      //           .validate() &&
-                      //       value.visionhearingFormKey.currentState!
-                      //           .validate() &&
-                      //       value.supplementsherbalremediesFormKey.currentState!
-                      //           .validate()) {
-                      //     Utils(context).showCustomDialog(
-                      //       child: const SendDoctorWidget(),
-                      //     );
-                      //   } else {
-                      //     CustomSnackbar.show(
-                      //         context: context,
-                      //         snackbarColor: Colors.red,
-                      //         message: 'Please Input All Fields');
-                      //   }
-                      // },
                       ontap: () {
-                        if (value.sexualhealthFormKey.currentState!.validate() &&
+                        if (value.patientFormKey.currentState!.validate() &&
+                            value.currentsymptomsFormKey.currentState!
+                                .validate() &&
+                            value.medicalHistoryFormKey.currentState!
+                                .validate() &&
+                            value.allergiesFormKey.currentState!.validate() &&
+                            value.immunizationstatusFormKey.currentState!
+                                .validate() &&
+                            value.lifestylehabitsFormKey.currentState!
+                                .validate() &&
+                            value.familyMedicalHistroryFormKey.currentState!
+                                .validate() &&
+                            value.travelHistoryFormKey.currentState!
+                                .validate() &&
+                            value
+                                .socialEnvironmentalFactorsFormKey.currentState!
+                                .validate() &&
+                            value.isnsuranceInformationFormKey.currentState!
+                                .validate() &&
+                            value.genderIdentityFormKey.currentState!
+                                .validate() &&
+                            value.previousmedicaltestFormKey.currentState!
+                                .validate() &&
+                            value.primaryconcernFormKey.currentState!
+                                .validate() &&
+                            value.medicationhistoryFormKey.currentState!
+                                .validate() &&
+                            value.painscaleFormKey.currentState!.validate() &&
+                            value.changesinhealthFormKey.currentState!
+                                .validate() &&
+                            value.menstrualhistoryFormKey.currentState!
+                                .validate() &&
+                            value.recentinjuriesFormKey.currentState!
+                                .validate() &&
+                            value.mentalhealthFormKey.currentState!
+                                .validate() &&
+                            value.contraceptionFormKey.currentState!
+                                .validate() &&
+                            value.dietaryrestrictionsFormKey.currentState!
+                                .validate() &&
+                            value.sleeppatternsFormKey.currentState!
+                                .validate() &&
+                            value.physicalactivityFormKey.currentState!
+                                .validate() &&
+                            value.medicaldevicesFormKey.currentState!
+                                .validate() &&
+                            value.visionhearingFormKey.currentState!
+                                .validate() &&
+                            value.supplementsherbalremediesFormKey.currentState!
+                                .validate() &&
+                            value.sexualhealthFormKey.currentState!
+                                .validate() &&
                             value.substanceuseFormKey.currentState!
                                 .validate() &&
                             value.mentalhealthhistoryFormKey.currentState!
+                                .validate() &&
+                            value.recentstressorsFormKey.currentState!
+                                .validate() &&
+                            value.otherconcernsFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
                           );
+                        } else {
+                          CustomSnackbar.show(
+                              context: context,
+                              snackbarColor: Colors.red,
+                              message: 'Please Input All Fields');
                         }
-                        // Utils(context).showCustomDialog(
-                        //   child: const SendDoctorWidget(),
-                        // );
                       },
                       buttontext: "Send Information to Doctor"),
                 ],

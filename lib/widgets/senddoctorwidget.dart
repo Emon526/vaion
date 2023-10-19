@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../providers/infoprovider.dart';
 import 'custominputwidget.dart';
+import 'customsnackbar.dart';
 import 'cutombutton.dart';
 
 class SendDoctorWidget extends StatelessWidget {
@@ -117,6 +118,12 @@ Do you use recreational drugs or have a history of substance abuse? ${value.subs
 
 Mental Health History:
 Have you been diagnosed with any mental health conditions in the past? ${value.mentalhealthhistoryQ1}
+
+Recent Stressors:
+Are there any recent stressful events or changes in your life that you would like to mention? ${value.recentstressorsQ1}
+
+Any Other Specific Concerns:
+Is there anything else you believe is important for the doctor to know before your appointment? ${value.otherconcernsQ1}
 ''';
     }
 
@@ -165,17 +172,19 @@ Have you been diagnosed with any mental health conditions in the past? ${value.m
                         }),
                       );
 
-                      if (await canLaunchUrl(emailLaunchUri)) {
-                        launchUrl(emailLaunchUri);
-                      } else {
-                        throw Exception("Could not launch $emailLaunchUri");
+                      try {
+                        await launchUrl(emailLaunchUri).then((value) =>
+                            CustomSnackbar.show(
+                                context: context,
+                                snackbarColor: Colors.green,
+                                message: 'Email Sent'));
+                      } catch (e) {
+                        CustomSnackbar.show(
+                            context: context,
+                            snackbarColor: Colors.red,
+                            message: 'Send Failed');
+                        print(e.toString());
                       }
-
-                      // try {
-                      //   await launchUrl(emailLaunchUri);
-                      // } catch (e) {
-                      //   print(e.toString());
-                      // }
                     }
                   },
                   buttontext: "Send Email")

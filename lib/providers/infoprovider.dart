@@ -403,4 +403,24 @@ class InfoProvider extends ChangeNotifier {
     _mentalhealthhistoryQ1 = value;
     notifyListeners();
   }
+
+  final _recentstressorsFormKey = GlobalKey<FormState>();
+  get recentstressorsFormKey => _recentstressorsFormKey;
+
+  String _recentstressorsQ1 = '';
+  get recentstressorsQ1 => _recentstressorsQ1;
+  set recentstressorsQ1(value) {
+    _recentstressorsQ1 = value;
+    notifyListeners();
+  }
+
+  final _otherconcernsFormKey = GlobalKey<FormState>();
+  get otherconcernsFormKey => _otherconcernsFormKey;
+
+  String _otherconcernsQ1 = '';
+  get otherconcernsQ1 => _otherconcernsQ1;
+  set otherconcernsQ1(value) {
+    _otherconcernsQ1 = value;
+    notifyListeners();
+  }
 }

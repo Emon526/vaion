@@ -33,10 +33,6 @@ class MyApp extends StatelessWidget {
             themeMode: ThemeMode.system,
             debugShowCheckedModeBanner: false,
             title: Consts.appName,
-            // theme: ThemeData(
-            //   colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF38ACDB)),
-            //   useMaterial3: true,
-            // ),
             home: HomeScreen(),
           );
         });
