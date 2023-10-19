@@ -111,6 +111,12 @@ Are you currently taking any dietary supplements, herbal remedies, or alternativ
 
 Sexual Healt :
 Are there any sexual health concerns or questions you would like to discuss? ${value.sexualhealthQ1}
+
+Substance Use:
+Do you use recreational drugs or have a history of substance abuse? ${value.substanceuseQ1}
+
+Mental Health History:
+Have you been diagnosed with any mental health conditions in the past? ${value.mentalhealthhistoryQ1}
 ''';
     }
 

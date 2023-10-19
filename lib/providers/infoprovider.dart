@@ -383,4 +383,24 @@ class InfoProvider extends ChangeNotifier {
     _sexualhealthQ1 = value;
     notifyListeners();
   }
+
+  final _substanceuseFormKey = GlobalKey<FormState>();
+  get substanceuseFormKey => _substanceuseFormKey;
+
+  String _substanceuseQ1 = '';
+  get substanceuseQ1 => _substanceuseQ1;
+  set substanceuseQ1(value) {
+    _substanceuseQ1 = value;
+    notifyListeners();
+  }
+
+  final _mentalhealthhistoryFormKey = GlobalKey<FormState>();
+  get mentalhealthhistoryFormKey => _mentalhealthhistoryFormKey;
+
+  String _mentalhealthhistoryQ1 = '';
+  get mentalhealthhistoryQ1 => _mentalhealthhistoryQ1;
+  set mentalhealthhistoryQ1(value) {
+    _mentalhealthhistoryQ1 = value;
+    notifyListeners();
+  }
 }

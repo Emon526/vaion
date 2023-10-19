@@ -21,6 +21,7 @@ import '../widgets/medicaldeviceswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
 import '../widgets/medicationhistorywidget.dart';
 import '../widgets/menstrualhistorywidget.dart';
+import '../widgets/mentalhealthhistorywidget.dart';
 import '../widgets/mentalhealthwidget.dart';
 import '../widgets/painscalewidget.dart';
 import '../widgets/personalinfowidget.dart';
@@ -32,6 +33,7 @@ import '../widgets/senddoctorwidget.dart';
 import '../widgets/sexualhealthwidget.dart';
 import '../widgets/sleeppatternswidget.dart';
 import '../widgets/socialenvironmentalfactorswidget.dart';
+import '../widgets/substanceusewidget.dart';
 import '../widgets/supplementsherbalremedieswidget.dart';
 import '../widgets/travelhistorywidget.dart';
 import '../widgets/visionhearingwidget.dart';
@@ -108,23 +110,27 @@ class HomeScreen extends StatelessWidget {
                   // SizedBox(height: size.height * 0.02),
                   // const RecentInjuriesWidget(),
                   // SizedBox(height: size.height * 0.02),
-                  const MentalHealthWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const ContraceptionWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const DietaryRestrictionsWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const SleepPatternsWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const PhysicalActivityWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const MedicalDevicesWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const VisionHearingWidget(),
-                  SizedBox(height: size.height * 0.02),
-                  const SupplementsHerbalRemediesWidget(),
-                  SizedBox(height: size.height * 0.02),
+                  // const MentalHealthWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const ContraceptionWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const DietaryRestrictionsWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const SleepPatternsWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const PhysicalActivityWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const MedicalDevicesWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const VisionHearingWidget(),
+                  // SizedBox(height: size.height * 0.02),
+                  // const SupplementsHerbalRemediesWidget(),
+                  // SizedBox(height: size.height * 0.02),
                   const SexualHealthWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const SubstanceUseWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const MentalHealthHistoryWidget(),
                   SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
@@ -148,7 +154,8 @@ class HomeScreen extends StatelessWidget {
                       //       value.isnsuranceInformationFormKey.currentState!
                       //           .validate() &&
                       //       value.genderIdentityFormKey.currentState!
-                      //           .validate()&&value.previousmedicaltestFormKey.currentState!
+                      //           .validate() &&
+                      //       value.previousmedicaltestFormKey.currentState!
                       //           .validate() &&
                       //       value.primaryconcernFormKey.currentState!
                       //           .validate() &&
@@ -160,6 +167,22 @@ class HomeScreen extends StatelessWidget {
                       //       value.menstrualhistoryFormKey.currentState!
                       //           .validate() &&
                       //       value.recentinjuriesFormKey.currentState!
+                      //           .validate() &&
+                      //       value.mentalhealthFormKey.currentState!
+                      //           .validate() &&
+                      //       value.contraceptionFormKey.currentState!
+                      //           .validate() &&
+                      //       value.dietaryrestrictionsFormKey.currentState!
+                      //           .validate() &&
+                      //       value.sleeppatternsFormKey.currentState!
+                      //           .validate() &&
+                      //       value.physicalactivityFormKey.currentState!
+                      //           .validate() &&
+                      //       value.medicaldevicesFormKey.currentState!
+                      //           .validate() &&
+                      //       value.visionhearingFormKey.currentState!
+                      //           .validate() &&
+                      //       value.supplementsherbalremediesFormKey.currentState!
                       //           .validate()) {
                       //     Utils(context).showCustomDialog(
                       //       child: const SendDoctorWidget(),
@@ -172,23 +195,10 @@ class HomeScreen extends StatelessWidget {
                       //   }
                       // },
                       ontap: () {
-                        if (value.mentalhealthFormKey.currentState!
+                        if (value.sexualhealthFormKey.currentState!.validate() &&
+                            value.substanceuseFormKey.currentState!
                                 .validate() &&
-                            value.contraceptionFormKey.currentState!
-                                .validate() &&
-                            value.dietaryrestrictionsFormKey.currentState!
-                                .validate() &&
-                            value.sleeppatternsFormKey.currentState!
-                                .validate() &&
-                            value.physicalactivityFormKey.currentState!
-                                .validate() &&
-                            value.medicaldevicesFormKey.currentState!
-                                .validate() &&
-                            value.visionhearingFormKey.currentState!
-                                .validate() &&
-                            value.supplementsherbalremediesFormKey.currentState!
-                                .validate() &&
-                            value.sexualhealthFormKey.currentState!
+                            value.mentalhealthhistoryFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
