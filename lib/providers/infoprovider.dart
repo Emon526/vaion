@@ -363,4 +363,24 @@ class InfoProvider extends ChangeNotifier {
     _visionhearingQ1 = value;
     notifyListeners();
   }
+
+  final _supplementsherbalremediesFormKey = GlobalKey<FormState>();
+  get supplementsherbalremediesFormKey => _supplementsherbalremediesFormKey;
+
+  String _supplementsherbalremediesQ1 = '';
+  get supplementsherbalremediesQ1 => _supplementsherbalremediesQ1;
+  set supplementsherbalremediesQ1(value) {
+    _supplementsherbalremediesQ1 = value;
+    notifyListeners();
+  }
+
+  final _sexualhealthFormKey = GlobalKey<FormState>();
+  get sexualhealthFormKey => _sexualhealthFormKey;
+
+  String _sexualhealthQ1 = '';
+  get sexualhealthQ1 => _sexualhealthQ1;
+  set sexualhealthQ1(value) {
+    _sexualhealthQ1 = value;
+    notifyListeners();
+  }
 }

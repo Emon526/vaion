@@ -105,6 +105,12 @@ Are you using any medical devices or equipment at home, such as a CPAP machine o
 
 Vision and Hearing:
 Do you wear corrective lenses or hearing aids? Are you experiencing any changes in vision or hearing? ${value.visionhearingQ1}
+
+Supplements and Herbal Remedies:
+Are you currently taking any dietary supplements, herbal remedies, or alternative treatments? ${value.supplementsherbalremediesQ1}
+
+Sexual Healt :
+Are there any sexual health concerns or questions you would like to discuss? ${value.sexualhealthQ1}
 ''';
     }
 
