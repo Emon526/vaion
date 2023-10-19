@@ -343,4 +343,24 @@ class InfoProvider extends ChangeNotifier {
     _physicalactivityQ1 = value;
     notifyListeners();
   }
+
+  final _medicaldevicesFormKey = GlobalKey<FormState>();
+  get medicaldevicesFormKey => _medicaldevicesFormKey;
+
+  String _medicaldevicesQ1 = '';
+  get medicaldevicesQ1 => _medicaldevicesQ1;
+  set medicaldevicesQ1(value) {
+    _medicaldevicesQ1 = value;
+    notifyListeners();
+  }
+
+  final _visionhearingFormKey = GlobalKey<FormState>();
+  get visionhearingFormKey => _visionhearingFormKey;
+
+  String _visionhearingQ1 = '';
+  get visionhearingQ1 => _visionhearingQ1;
+  set visionhearingQ1(value) {
+    _visionhearingQ1 = value;
+    notifyListeners();
+  }
 }

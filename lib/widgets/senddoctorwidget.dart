@@ -99,6 +99,12 @@ How is your sleep quality and duration? Are you experiencing any sleep disturban
 
 Mobility and Physical Activity:
 Do you have any mobility limitations or engage in regular physical activity or exercise? ${value.physicalactivityQ1}
+
+Medical Devices:
+Are you using any medical devices or equipment at home, such as a CPAP machine or insulin pump? ${value.medicaldevicesQ1}
+
+Vision and Hearing:
+Do you wear corrective lenses or hearing aids? Are you experiencing any changes in vision or hearing? ${value.visionhearingQ1}
 ''';
     }
 

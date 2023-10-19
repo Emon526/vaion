@@ -17,6 +17,7 @@ import '../widgets/genderidentitywidget.dart';
 import '../widgets/immunizationstatuswidget.dart';
 import '../widgets/insuranceInfowidget.dart';
 import '../widgets/lifestylehabitswidget.dart';
+import '../widgets/medicaldeviceswidget.dart';
 import '../widgets/medicalhistorywidget.dart';
 import '../widgets/medicationhistorywidget.dart';
 import '../widgets/menstrualhistorywidget.dart';
@@ -31,6 +32,7 @@ import '../widgets/senddoctorwidget.dart';
 import '../widgets/sleeppatternswidget.dart';
 import '../widgets/socialenvironmentalfactorswidget.dart';
 import '../widgets/travelhistorywidget.dart';
+import '../widgets/visionhearingwidget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -114,6 +116,10 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const PhysicalActivityWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const MedicalDevicesWidget(),
+                  SizedBox(height: size.height * 0.02),
+                  const VisionHearingWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
                       //   if (value.patientFormKey.currentState!.validate() &&
@@ -169,6 +175,10 @@ class HomeScreen extends StatelessWidget {
                             value.sleeppatternsFormKey.currentState!
                                 .validate() &&
                             value.physicalactivityFormKey.currentState!
+                                .validate() &&
+                            value.medicaldevicesFormKey.currentState!
+                                .validate() &&
+                            value.visionhearingFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
