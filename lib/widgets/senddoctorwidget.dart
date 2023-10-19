@@ -97,6 +97,8 @@ Do you have any dietary restrictions or specific dietary preferences? ${value.di
 Sleep Patterns:
 How is your sleep quality and duration? Are you experiencing any sleep disturbances? ${value.sleeppatternsQ1}
 
+Mobility and Physical Activity:
+Do you have any mobility limitations or engage in regular physical activity or exercise? ${value.physicalactivityQ1}
 ''';
     }
 

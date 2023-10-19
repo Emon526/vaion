@@ -333,4 +333,14 @@ class InfoProvider extends ChangeNotifier {
     _sleeppatternsQ1 = value;
     notifyListeners();
   }
+
+  final _physicalactivityFormKey = GlobalKey<FormState>();
+  get physicalactivityFormKey => _physicalactivityFormKey;
+
+  String _physicalactivityQ1 = '';
+  get physicalactivityQ1 => _physicalactivityQ1;
+  set physicalactivityQ1(value) {
+    _physicalactivityQ1 = value;
+    notifyListeners();
+  }
 }

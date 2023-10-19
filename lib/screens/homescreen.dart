@@ -23,6 +23,7 @@ import '../widgets/menstrualhistorywidget.dart';
 import '../widgets/mentalhealthwidget.dart';
 import '../widgets/painscalewidget.dart';
 import '../widgets/personalinfowidget.dart';
+import '../widgets/physicalactivitywidget.dart';
 import '../widgets/previousmedicaltestwidget.dart';
 import '../widgets/primaryconcernwidget.dart';
 import '../widgets/recentinjurieswidget.dart';
@@ -111,6 +112,8 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.02),
                   const SleepPatternsWidget(),
                   SizedBox(height: size.height * 0.02),
+                  const PhysicalActivityWidget(),
+                  SizedBox(height: size.height * 0.02),
                   CustomButton(
                       // ontap: () {
                       //   if (value.patientFormKey.currentState!.validate() &&
@@ -164,6 +167,8 @@ class HomeScreen extends StatelessWidget {
                             value.dietaryrestrictionsFormKey.currentState!
                                 .validate() &&
                             value.sleeppatternsFormKey.currentState!
+                                .validate() &&
+                            value.physicalactivityFormKey.currentState!
                                 .validate()) {
                           Utils(context).showCustomDialog(
                             child: const SendDoctorWidget(),
