@@ -1,7 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:vaion/utils/utils.dart';
 
 import '../providers/infoprovider.dart';
 import 'custominputwidget.dart';
@@ -154,35 +156,27 @@ Is there anything else you believe is important for the doctor to know before yo
               SizedBox(height: size.height * 0.02),
               CustomButton(
                   ontap: () async {
+                    FocusManager.instance.primaryFocus?.unfocus();
                     if (value.senddoctoremailFormKey.currentState!.validate()) {
-                      String? encodeQueryParameters(
-                          Map<String, String> params) {
-                        return params.entries
-                            .map((MapEntry<String, String> e) =>
-                                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                            .join('&');
-                      }
-
-                      final Uri emailLaunchUri = Uri(
-                        scheme: 'mailto',
-                        path: doctoremailController.text,
-                        query: encodeQueryParameters(<String, String>{
-                          'subject': value.patientName,
-                          'body': createPatientInformationText(value),
-                        }),
-                      );
-
                       try {
-                        await launchUrl(emailLaunchUri).then((value) =>
-                            CustomSnackbar.show(
-                                context: context,
-                                snackbarColor: Colors.green,
-                                message: 'Email Sent'));
+                        await Utils(context).sendEmail(
+                          subject: value.patientName,
+                          fromemail: value.patientemail,
+                          toemail: doctoremailController.text,
+                          body: createPatientInformationText(value),
+                        );
+
+                        Navigator.pop(context);
+                        CustomSnackbar.show(
+                            context: context,
+                            snackbarColor: Colors.green,
+                            message: 'Email Send Successfully');
+                        // Navigator.pop(context);
                       } catch (e) {
                         CustomSnackbar.show(
                             context: context,
                             snackbarColor: Colors.red,
-                            message: 'Send Failed');
+                            message: 'Email Send Failed');
                         print(e.toString());
                       }
                     }
@@ -195,3 +189,36 @@ Is there anything else you believe is important for the doctor to know before yo
     );
   }
 }
+
+
+ //   String? encodeQueryParameters(
+                      //       Map<String, String> params) {
+                      //     return params.entries
+                      //         .map((MapEntry<String, String> e) =>
+                      //             '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                      //         .join('&');
+                      //   }
+
+                      //   final Uri emailLaunchUri = Uri(
+                      //     scheme: 'mailto',
+                      //     path: doctoremailController.text,
+                      //     query: encodeQueryParameters(<String, String>{
+                      //       'subject': value.patientName,
+                      //       'body': createPatientInformationText(value),
+                      //     }),
+                      //   );
+
+                      //   try {
+                      //     // await launchUrl(emailLaunchUri).then((value) =>
+                      //     //     CustomSnackbar.show(
+                      //     //         context: context,
+                      //     //         snackbarColor: Colors.green,
+                      //     //         message: 'Email Sent'));
+                      //   } catch (e) {
+                      //     CustomSnackbar.show(
+                      //         context: context,
+                      //         snackbarColor: Colors.red,
+                      //         message: 'Send Failed');
+                      //     print(e.toString());
+                      //   }
+                      // }

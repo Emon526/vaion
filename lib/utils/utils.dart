@@ -1,5 +1,9 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import '../consts/consts.dart';
 
@@ -87,5 +91,35 @@ class Utils {
         ),
       ),
     );
+  }
+
+  Future sendEmail({
+    required String subject,
+    required String toemail,
+    required String fromemail,
+    required String body,
+  }) async {
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    final response = await http.post(
+      url,
+      headers: {
+        'origin': 'http://localhost',
+        'Content-Type': 'application/json',
+      },
+      body: json.encode({
+        'service_id': Consts.serviceid,
+        'template_id': Consts.templateid,
+        'user_id': Consts.userid,
+        'template_params': {
+          'subject': subject,
+          'body': body,
+          'toemail': toemail,
+          'fromemail': fromemail,
+        }
+      }),
+    );
+    debugPrint(response.body);
+    log('done');
+    log(response.body);
   }
 }
