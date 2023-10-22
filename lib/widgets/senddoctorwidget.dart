@@ -184,36 +184,3 @@ Is there anything else you believe is important for the doctor to know before yo
     );
   }
 }
-
-
- //   String? encodeQueryParameters(
-                      //       Map<String, String> params) {
-                      //     return params.entries
-                      //         .map((MapEntry<String, String> e) =>
-                      //             '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                      //         .join('&');
-                      //   }
-
-                      //   final Uri emailLaunchUri = Uri(
-                      //     scheme: 'mailto',
-                      //     path: doctoremailController.text,
-                      //     query: encodeQueryParameters(<String, String>{
-                      //       'subject': value.patientName,
-                      //       'body': createPatientInformationText(value),
-                      //     }),
-                      //   );
-
-                      //   try {
-                      //     // await launchUrl(emailLaunchUri).then((value) =>
-                      //     //     CustomSnackbar.show(
-                      //     //         context: context,
-                      //     //         snackbarColor: Colors.green,
-                      //     //         message: 'Email Sent'));
-                      //   } catch (e) {
-                      //     CustomSnackbar.show(
-                      //         context: context,
-                      //         snackbarColor: Colors.red,
-                      //         message: 'Send Failed');
-                      //     print(e.toString());
-                      //   }
-                      // }
