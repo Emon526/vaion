@@ -52,24 +52,24 @@ jobs:
           flutter pub get
           # flutter pub deps
           
-      - name: Run build_runner
-        run: dart run build_runner build
+      # - name: Run build_runner
+      #   run: dart run build_runner build
 
       - name: Build Android
         run: |
-          flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+          # flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
           flutter build apk --release
 
-      - name: Build iOS
-        run: |
-          pod repo update
-          flutter build ios --release --no-codesign
-          cd build/ios/iphoneos
-          mkdir Payload
-          cd Payload
-          ln -s ../Runner.app
-          cd ..
-          zip -r app.ipa Payload
+      # - name: Build iOS
+      #   run: |
+      #     pod repo update
+      #     flutter build ios --release --no-codesign
+      #     cd build/ios/iphoneos
+      #     mkdir Payload
+      #     cd Payload
+      #     ln -s ../Runner.app
+      #     cd ..
+      #     zip -r app.ipa Payload
 
       - name: Generate Changelog
         id: changelog
@@ -83,7 +83,7 @@ jobs:
         with:
           files: |
             build/app/outputs/flutter-apk/*.apk
-            build/ios/iphoneos/app.ipa
+            # build/ios/iphoneos/app.ipa
             # build/macos/Build/Products/Release/yoyo.mac.zip
             # yy-linux-x86_64.tar.gz
             # yy-windows.zip
