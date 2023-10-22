@@ -167,11 +167,6 @@ Is there anything else you believe is important for the doctor to know before yo
                         );
 
                         Navigator.pop(context);
-                        CustomSnackbar.show(
-                            context: context,
-                            snackbarColor: Colors.green,
-                            message: 'Email Send Successfully');
-                        // Navigator.pop(context);
                       } catch (e) {
                         CustomSnackbar.show(
                             context: context,
